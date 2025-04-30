@@ -1,17 +1,13 @@
-﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:glassmorphism="clr-namespace:CherylUI.Glassmorphism">
-
+﻿<Styles xmlns="https://github.com/avaloniaui" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:glassMorphism="clr-namespace:CherylUI.Controls.GlassMorphism">
     <Design.PreviewWith>
-        <Grid
-            Background="{DynamicResource Background}"
-            Height="800"
-            Width="480">
-
+        <Grid Background="{DynamicResource Background}" Height="800" Width="480">
             <TabControl>
                 <TabItem>
                     <TabItem.Header>
                         <StackPanel>
-                            <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
+                            <PathIcon Classes="Tab" Data="{StaticResource ScrollBarContractDelay}" />
                             <TextBlock Classes="Tab" Text="Tab 1" />
                         </StackPanel>
                     </TabItem.Header>
@@ -23,7 +19,7 @@
                 <TabItem>
                     <TabItem.Header>
                         <StackPanel>
-                            <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
+                            <PathIcon Classes="Tab" Data="{StaticResource ScrollBarContractDelay}" />
                             <TextBlock Classes="Tab" Text="Tab 2" />
                         </StackPanel>
                     </TabItem.Header>
@@ -31,7 +27,7 @@
                 <TabItem>
                     <TabItem.Header>
                         <StackPanel>
-                            <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
+                            <PathIcon Classes="Tab" Data="{StaticResource ScrollBarContractDelay}" />
                             <TextBlock Classes="Tab" Text="Tab 3" />
                         </StackPanel>
                     </TabItem.Header>
@@ -39,7 +35,7 @@
                 <TabItem>
                     <TabItem.Header>
                         <StackPanel>
-                            <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
+                            <PathIcon Classes="Tab" Data="{StaticResource ScrollBarContractDelay}" />
                             <TextBlock Classes="Tab" Text="Tab 4" />
                         </StackPanel>
                     </TabItem.Header>
@@ -59,9 +55,7 @@
                     CornerRadius="{TemplateBinding CornerRadius}"
                     HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
                     VerticalAlignment="{TemplateBinding VerticalAlignment}">
-                   
                     <Panel>
-                       
                         <ContentPresenter
                             Content="{TemplateBinding SelectedContent}"
                             ContentTemplate="{TemplateBinding SelectedContentTemplate}"
@@ -69,16 +63,14 @@
                             Margin="{TemplateBinding Padding}"
                             Name="PART_SelectedContentHost"
                             VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
-                        
                         <Border BorderBrush="{DynamicResource Separator}" BorderThickness="0,1,0,0" VerticalAlignment="Bottom" >
-                        <Panel >
-                            
+                        <Panel>
                             <Border Opacity="0.25" IsVisible="{DynamicResource IsDark}" Background="Black"></Border>
                             <Border Opacity="0.25" IsVisible="{DynamicResource IsLight}" Background="White"></Border>
                           <Border ClipToBounds="True">
-                            <glassmorphism:BlurBackground Margin="-30" />
+                            <glassMorphism:BlurBackground Margin="-30" />
                           </Border>
-                            <ItemsPresenter  Name="PART_ItemsPresenter">
+                            <ItemsPresenter Name="PART_ItemsPresenter">
                                 <ItemsPresenter.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <UniformGrid Columns="{Binding Items}" Rows="1" />
@@ -88,7 +80,6 @@
                         </Panel>
                             </Border>
                     </Panel>
-                
                 </Border>
             </ControlTemplate>
         </Setter>
@@ -109,7 +100,7 @@
                     Background="Transparent"
                     BorderThickness="0"
                     CornerRadius="20"
-                    Name="PART_LayoutRootn"
+                    Name="PART_LayoutRoot"
                     Padding="{TemplateBinding Padding}">
 
                     <Panel>
@@ -127,7 +118,7 @@
                                 Foreground="Red"
                                 HorizontalContentAlignment="Center"
                                 Name="PART_ContentPresentern"
-                                Padding="10,12"
+                                Padding="4,8,4,0"
                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                         </Border>
 
@@ -140,42 +131,34 @@
     <Style Selector="TabItem TextBlock.Tab">
         <Setter Property="FontWeight" Value="DemiBold" />
         <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
-        <Setter Property="FontSize" Value="15" />
-
+        <Setter Property="FontSize" Value="12" />
     </Style>
 
     <Style Selector="TabItem:selected TextBlock.Tab">
-        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontWeight" Value="DemiBold" />
         <Setter Property="Foreground" Value="{DynamicResource Accent}" />
-        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontSize" Value="12" />
     </Style>
 
     <Style Selector="TabItem PathIcon.Tab">
-        <Setter Property="Margin" Value="7" />
-        <Setter Property="Height" Value="24" />
-        <Setter Property="Width" Value="24" />
         <Setter Property="FontWeight" Value="DemiBold" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Height" Value="20" />
+        <Setter Property="Width" Value="20" />
         <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
-        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontSize" Value="12" />
         <Setter Property="Transitions">
             <Transitions>
                 <DoubleTransition Duration="0:0:0.3" Property="Width" />
-
             </Transitions>
         </Setter>
     </Style>
-
+    
     <Style Selector="TabItem:selected PathIcon.Tab">
-        <Setter Property="FontWeight" Value="Bold" />
-        <Setter Property="Height" Value="27" />
-        <Setter Property="Width" Value="27" />
+        <Setter Property="FontWeight" Value="DemiBold" />
+        <Setter Property="Height" Value="20" />
+        <Setter Property="Width" Value="20" />
         <Setter Property="Foreground" Value="{DynamicResource Accent}" />
-        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontSize" Value="12" />
     </Style>
-
-
-
-
-
-
 </Styles>

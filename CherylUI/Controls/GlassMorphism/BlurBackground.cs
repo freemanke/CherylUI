@@ -1,9 +1,5 @@
-﻿using System;
-using System.Globalization;
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Data;
-using Avalonia.Data.Converters;
 using Avalonia.Media;
 using Avalonia.Platform;
 using Avalonia.Rendering.SceneGraph;
@@ -11,7 +7,7 @@ using Avalonia.Skia;
 using Avalonia.Styling;
 using SkiaSharp;
 
-namespace CherylUI.Glassmorphism;
+namespace CherylUI.Controls.GlassMorphism;
 
 
  public class BlurBackground : Control
