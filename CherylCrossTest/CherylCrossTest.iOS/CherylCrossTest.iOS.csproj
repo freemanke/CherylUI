@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net7.0-ios</TargetFramework>
-        <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
+        <TargetFramework>net9.0-ios</TargetFramework>
+        <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
         <ProvisioningType>manual</ProvisioningType>
         <Nullable>enable</Nullable>
         <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
@@ -11,12 +11,17 @@
         <!--<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>-->
         <!--<CodesignKey></CodesignKey>-->
     </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <MtouchLink>Full</MtouchLink>
+      <CodesignKey>iPhone Developer</CodesignKey>
+    </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Avalonia.iOS" Version="$(AvaloniaVersion)"/>
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\..\CherylUI\CherylUI.csproj" />
         <ProjectReference Include="..\CherylCrossTest\CherylCrossTest.csproj"/>
     </ItemGroup>
 </Project>
