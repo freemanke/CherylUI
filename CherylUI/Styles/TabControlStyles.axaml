@@ -130,23 +130,22 @@
 
     <Style Selector="TabItem TextBlock.Tab">
         <Setter Property="FontWeight" Value="DemiBold" />
-        <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
         <Setter Property="FontSize" Value="12" />
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
     </Style>
 
     <Style Selector="TabItem:selected TextBlock.Tab">
-        <Setter Property="FontWeight" Value="DemiBold" />
         <Setter Property="Foreground" Value="{DynamicResource Accent}" />
-        <Setter Property="FontSize" Value="12" />
     </Style>
 
     <Style Selector="TabItem PathIcon.Tab">
         <Setter Property="FontWeight" Value="DemiBold" />
-        <Setter Property="Margin" Value="0" />
         <Setter Property="Height" Value="20" />
         <Setter Property="Width" Value="20" />
-        <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
         <Setter Property="FontSize" Value="12" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
         <Setter Property="Transitions">
             <Transitions>
                 <DoubleTransition Duration="0:0:0.3" Property="Width" />
@@ -155,10 +154,6 @@
     </Style>
     
     <Style Selector="TabItem:selected PathIcon.Tab">
-        <Setter Property="FontWeight" Value="DemiBold" />
-        <Setter Property="Height" Value="20" />
-        <Setter Property="Width" Value="20" />
         <Setter Property="Foreground" Value="{DynamicResource Accent}" />
-        <Setter Property="FontSize" Value="12" />
     </Style>
 </Styles>

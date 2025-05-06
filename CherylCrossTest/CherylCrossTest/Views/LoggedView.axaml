@@ -4,7 +4,6 @@
     mc:Ignorable="d"
     x:Class="CherylCrossTest.Views.LoggedView"
     xmlns="https://github.com/avaloniaui"
-    xmlns:controls="clr-namespace:CherylUI.Controls;assembly=CherylUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -13,7 +12,6 @@
             HorizontalAlignment="Center"
             Text="Logged."
             VerticalAlignment="Center" />
-
         <Button
             Click="Button_OnClick"
             Margin="20"

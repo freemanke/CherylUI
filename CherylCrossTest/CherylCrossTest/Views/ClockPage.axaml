@@ -9,14 +9,12 @@
     xmlns:glassMorphism="clr-namespace:CherylUI.Controls.GlassMorphism;assembly=CherylUI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
     <controls:SliverPage  Header="Alarm">
         <StackPanel Margin="13,20">
             <Image
                 HorizontalAlignment="Center"
                 Margin="70,00,50,50"
                 Source="../Assets/3d-fluency-clock.png" />
-
             <glassMorphism:GlassCard Margin="0,8">
                 <DockPanel>
                     <ToggleButton
@@ -45,7 +43,6 @@
                     </StackPanel>
                 </DockPanel>
             </glassMorphism:GlassCard>
-
             <glassMorphism:GlassCard Margin="0,8">
                 <DockPanel>
                     <ToggleButton
@@ -74,7 +71,6 @@
                     </StackPanel>
                 </DockPanel>
             </glassMorphism:GlassCard>
-
             <glassMorphism:GlassCard Margin="0,8">
                 <DockPanel>
                     <ToggleButton
@@ -106,5 +102,4 @@
             <Border Height="100"></Border>
         </StackPanel>
     </controls:SliverPage>
-
 </UserControl>

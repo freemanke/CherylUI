@@ -12,7 +12,6 @@
     <controls:SliverPage Header="Log in">
         <Grid Margin="0,170,0,0" VerticalAlignment="Center">
             <glassMorphism:GlassCard Margin="14,0" VerticalAlignment="Center">
-
                 <StackPanel Margin="15,15,15,0">
                     <TextBlock
                         Classes="DemiBold"
@@ -30,9 +29,7 @@
                         <TextBlock Margin="30,0" Text="Log In" />
                     </Button>
                 </StackPanel>
-
             </glassMorphism:GlassCard>
         </Grid>
     </controls:SliverPage>
-
 </UserControl>

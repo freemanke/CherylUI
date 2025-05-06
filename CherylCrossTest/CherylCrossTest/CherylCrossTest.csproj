@@ -26,7 +26,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\CherylUI\CherylUI.csproj" />
+      <Reference Include="CherylUI">
+        <HintPath>..\..\CherylUI\bin\Debug\netstandard2.0\CherylUI.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
    
