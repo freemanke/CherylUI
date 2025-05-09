@@ -2,23 +2,17 @@
     <Styles.Resources>
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
-
                 <ResourceInclude Source="ColorThemes/LightTheme.axaml" x:Key="Light" />
                 <ResourceInclude Source="ColorThemes/DarkTheme.axaml" x:Key="Dark" />
-
-
             </ResourceDictionary.ThemeDictionaries>
             <ResourceDictionary.MergedDictionaries>
-
                 <ResourceInclude Source="Icons.axaml" />
                 <ResourceInclude Source="Styles/DatePickerStyles.axaml" />
             </ResourceDictionary.MergedDictionaries>
-
             <FontFamily x:Key="HarmonyFont">avares://CherylUI/CustomFont#Quicksand</FontFamily>
         </ResourceDictionary>
     </Styles.Resources>
     <SimpleTheme />
-
     <StyleInclude Source="Styles/TextStyles.axaml" />
     <StyleInclude Source="Styles/ButtonStyles.axaml" />
     <StyleInclude Source="Styles/CardStyles.axaml" />
