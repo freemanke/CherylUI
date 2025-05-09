@@ -80,7 +80,7 @@
                         CornerRadius="{TemplateBinding CornerRadius}"
                         HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                         Margin="-20,0,0,0"
-                        Name="PART_ContentPresentern"
+                        Name="PartContentPresenter"
                         Padding="{TemplateBinding Padding}"
                         VerticalAlignment="Center"
                         VerticalContentAlignment="Center" />
@@ -91,16 +91,16 @@
         </Setter>
     </Style>
 
-    <Style Selector="ListBoxItem:selected /template/ ContentPresenter#PART_ContentPresentern">
+    <Style Selector="ListBoxItem:selected /template/ ContentPresenter#PartContentPresenter">
         <Setter Property="Background" Value="Transparent" />
     </Style>
 
-    <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter#PART_ContentPresentern">
+    <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter#PartContentPresenter">
         <Setter Property="Background" Value="Transparent" />
     </Style>
 
 
-    <Style Selector="ListBoxItem:selected /template/ ContentPresenter#PART_ContentPresentern">
+    <Style Selector="ListBoxItem:selected /template/ ContentPresenter#PartContentPresenter">
         <Setter Property="Background" Value="Transparent" />
     </Style>
 

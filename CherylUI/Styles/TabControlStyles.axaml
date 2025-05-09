@@ -117,8 +117,8 @@
                                 FontWeight="Bold"
                                 Foreground="Red"
                                 HorizontalContentAlignment="Center"
-                                Name="PART_ContentPresentern"
-                                Padding="4,8,4,0"
+                                Name="PartContentPresenter"
+                                Padding="4,8,4,2"
                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                         </Border>
 

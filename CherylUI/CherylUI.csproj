@@ -22,9 +22,6 @@
 
     <ItemGroup>
       <None Remove="CustomFont\Nunito-Black.ttf" />
-      <AvaloniaResource Include="Assets\gradient_dark.png" />
-      <AvaloniaResource Include="Assets\gradient_light_strong.png" />
-      <AvaloniaResource Include="Assets\gradient_dark_strong.png" />
       <AvaloniaResource Include="CustomFont\Nunito-Black.ttf" />
       <None Remove="CustomFont\Nunito-BlackItalic.ttf" />
       <AvaloniaResource Include="CustomFont\Nunito-BlackItalic.ttf" />
@@ -66,8 +63,6 @@
       <AvaloniaResource Include="CustomFont\Quicksand-Regular.ttf" />
       <None Remove="CustomFont\Quicksand-SemiBold.ttf" />
       <AvaloniaResource Include="CustomFont\Quicksand-SemiBold.ttf" />
-      <None Remove="Assets\gradient_light.png" />
-      <AvaloniaResource Include="Assets\gradient_light.png" />
     </ItemGroup>
 
     <ItemGroup>

@@ -175,7 +175,7 @@
                                                     CornerRadius="{TemplateBinding CornerRadius}"
                                                     HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                                     Margin="0,0,0,0"
-                                                    Name="PART_ContentPresentern"
+                                                    Name="PartContentPresenter"
                                                     Padding="{TemplateBinding Padding}"
                                                     VerticalAlignment="Center"
                                                     VerticalContentAlignment="Center" />
