@@ -40,7 +40,6 @@
 
                             <Grid>
                               <Border ClipToBounds="True">
-                                <glassMorphism:BlurBackground Margin="-30" />
                               </Border>
                               <TextBlock
                                     FontSize="45"

@@ -39,7 +39,6 @@
                             VerticalAlignment="Top">
                             <Panel>
                               <Border ClipToBounds="True">
-                                <glassMorphism:BlurBackground Margin="-30" />
                               </Border>
                                 <Grid Margin="{Binding #scrollView.Offset, Converter={StaticResource MarginConverter}, ConverterParameter={TemplateBinding IsBackVisible}}">
                                     <TextBlock

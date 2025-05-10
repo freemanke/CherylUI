@@ -6,7 +6,7 @@ using Avalonia.Platform;
 
 namespace CherylUI.Controls.GlassMorphism;
 
-public class CherylBackground: Image, IDisposable
+public class CherylBackground : Image, IDisposable
 {
     private const int ImageWidth = 100;
     private const int ImageHeight = 100;
@@ -16,35 +16,29 @@ public class CherylBackground: Image, IDisposable
         PixelFormats.Bgra8888);
 
     /// <summary>
-    /// Quickly and easily assign a generator either for testing, or in future allow dev-defined generators...
+    /// Quickly and easily assign a generator either for testing,
+    /// or in future allow dev-defined generators...
     /// </summary>
-    private readonly FastNoiseBackgroundRenderer _renderer = new FastNoiseBackgroundRenderer();
+    private readonly FastNoiseBackgroundRenderer _renderer = new();
 
-
-    
     public CherylBackground()
     {
         Source = _bmp;
         Stretch = Stretch.UniformToFill;
-
     }
 
     public override void EndInit()
     {
         base.EndInit();
-
-        Application.Current.ActualThemeVariantChanged += (sender, args) =>
+        Application.Current!.ActualThemeVariantChanged += (sender, args) =>
         {
             _renderer.UpdateValues(Application.Current.ActualThemeVariant);
-            _renderer.Render(_bmp);
+            _ = _renderer.Render(_bmp);
         };
-        
+
         _renderer.UpdateValues(Application.Current.ActualThemeVariant);
-        _renderer.Render(_bmp);
-
+        _ = _renderer.Render(_bmp);
     }
-
-
 
     public void Dispose()
     {
