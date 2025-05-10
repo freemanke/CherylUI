@@ -1,20 +1,17 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
         <Border
-            Background="{DynamicResource SukiBackground}"
-            Height="200"
-            Padding="20"
-            Width="200">
+            Background="{DynamicResource SukiBackground}" Padding="20"  Height="200" Width="400">
             <ListBox>
-                <ListBoxItem>Test</ListBoxItem>
-                <ListBoxItem>Test</ListBoxItem>
-                <ListBoxItem>Test</ListBoxItem>
-                <ListBoxItem>Test</ListBoxItem>
-                <ListBoxItem>Test</ListBoxItem>
-
+                <ListBoxItem>China</ListBoxItem>
+                <ListBoxItem>USA</ListBoxItem>
+                <ListBoxItem>England</ListBoxItem>
+                <ListBoxItem>Russian</ListBoxItem>
+                <ListBoxItem>Serbia</ListBoxItem>
             </ListBox>
         </Border>
     </Design.PreviewWith>
+    
     <Style Selector="ListBox">
         <Setter Property="TextBlock.Foreground" Value="{DynamicResource SystemControlForegroundBaseHighBrush}" />
         <Setter Property="Background" Value="Transparent" />
@@ -22,7 +19,6 @@
         <Setter Property="BorderThickness" Value="{DynamicResource ListBoxBorderThemeThickness}" />
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
-
         <Setter Property="FontSize" Value="{DynamicResource ControlContentThemeFontSize}" />
         <Setter Property="Template">
             <ControlTemplate>
@@ -46,12 +42,8 @@
             </ControlTemplate>
         </Setter>
     </Style>
-
-
-
     <Style Selector="ListBoxItem">
         <Setter Property="Background" Value="Transparent" />
-
         <Setter Property="Template">
             <ControlTemplate>
                 <DockPanel Margin="0,-3,0,0">
@@ -62,7 +54,6 @@
                         Height="1"
                         Margin="0,6,0,0"
                         Name="Separator" />
-
                     <CheckBox
                         DockPanel.Dock="Right"
                         IsEnabled="False"
@@ -86,24 +77,17 @@
                         VerticalContentAlignment="Center" />
                 </DockPanel>
             </ControlTemplate>
-
-
         </Setter>
     </Style>
-
     <Style Selector="ListBoxItem:selected /template/ ContentPresenter#PartContentPresenter">
         <Setter Property="Background" Value="Transparent" />
     </Style>
-
     <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter#PartContentPresenter">
         <Setter Property="Background" Value="Transparent" />
     </Style>
-
-
     <Style Selector="ListBoxItem:selected /template/ ContentPresenter#PartContentPresenter">
         <Setter Property="Background" Value="Transparent" />
     </Style>
-
     <Style Selector="ListBoxItem">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="10 0 0 0" />
@@ -111,24 +95,16 @@
         <Setter Property="Padding" Value="10 0" />
         <Setter Property="Margin" Value="0 5" />
     </Style>
-
     <Style Selector="ListBoxItem:selected /template/ CheckBox">
-
         <Setter Property="IsChecked" Value="True" />
     </Style>
-
     <Style Selector="ListBoxItem TextBlock">
-
         <Setter Property="FontSize" Value="16" />
     </Style>
-
     <Style Selector="ListBoxItem /template/ CheckBox">
-
         <Setter Property="IsChecked" Value="False" />
     </Style>
-
     <Style Selector=":nth-last-child() /template/ Border#Separator">
-
         <Setter Property="IsVisible" Value="False" />
     </Style>
 </Styles>

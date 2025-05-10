@@ -1,38 +1,23 @@
-﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<Styles 
+    xmlns="https://github.com/avaloniaui" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
-        <Grid
-            Background="{DynamicResource Background}"
-            Height="700"
-            Width="780">
-
-
-            <Border
-                Classes="Card"
-                HorizontalAlignment="Center"
-                Margin="50"
-                VerticalAlignment="Center">
-                <StackPanel
-                    HorizontalAlignment="Center"
-                    Spacing="20"
-                    VerticalAlignment="Center">
-
-
-                    <Button HorizontalAlignment="Center">
-                        <TextBlock Text="Small" />
-                    </Button>
-
-                    <ToggleButton Classes="Switch" />
-                    <Button Classes="Small">
-                        <TextBlock Text="Normal" />
-                    </Button>
-                </StackPanel>
-            </Border>
-        </Grid>
+        <StackPanel
+            Background="{DynamicResource Background}" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Width="400" Height="500">
+            <Button HorizontalAlignment="Center" Width="100">
+                <TextBlock Text="Small" />
+            </Button>
+            <ToggleButton Classes="Switch" HorizontalAlignment="Center" />
+            <Button Classes="Small" Width="100">
+                <TextBlock Text="Normal" />
+            </Button>
+        </StackPanel>
     </Design.PreviewWith>
-
     <Style Selector="ToggleButton.Switch">
         <Setter Property="Foreground" Value="{DynamicResource Accent}" />
-
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Left" />
@@ -41,7 +26,6 @@
         <Setter Property="Template">
             <ControlTemplate>
                 <Grid Background="Transparent" RowDefinitions="Auto,*">
-
                     <ContentPresenter
                         Content="{TemplateBinding Content}"
                         ContentTemplate="{TemplateBinding ContentTemplate}"
@@ -49,35 +33,28 @@
                         RecognizesAccessKey="True"
                         VerticalAlignment="Top"
                         x:Name="PART_ContentPresenter" />
-
                     <Grid
                         Grid.Row="1"
                         HorizontalAlignment="Left"
                         MinWidth="{DynamicResource ToggleSwitchThemeMinWidth}"
                         VerticalAlignment="Top">
-
                         <Grid.RowDefinitions>
                             <RowDefinition Height="{DynamicResource ToggleSwitchPreContentMargin}" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="{DynamicResource ToggleSwitchPostContentMargin}" />
                         </Grid.RowDefinitions>
-
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition MaxWidth="12" Width="12" />
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
-
                         <Grid
                             Grid.ColumnSpan="3"
                             Grid.RowSpan="3"
                             Margin="0,5"
                             TemplatedControl.IsTemplateFocusTarget="True"
                             x:Name="SwitchAreaGrid" />
-
-
-                        <Border
-                            Background="Transparent"
+                        <Border Background="Transparent"
                             BorderThickness="0"
                             CornerRadius="50"
                             Grid.Row="1"
@@ -90,7 +67,6 @@
                                 </Transitions>
                             </Border.Transitions>
                         </Border>
-
                         <Border
                             Background="{DynamicResource ComponentBackground}"
                             BorderThickness="0"
@@ -107,18 +83,12 @@
                                 </Transitions>
                             </Border.Transitions>
                         </Border>
-
                         <Canvas
                             Grid.Row="1"
                             Height="30"
                             HorizontalAlignment="Left"
                             Width="30"
                             x:Name="PART_SwitchKnob">
-
-
-
-
-
                             <Border
                                 Background="White"
                                 Canvas.Left="5"
@@ -135,31 +105,18 @@
                                     </Transitions>
                                 </Border.Transitions>
                             </Border>
-
-
                         </Canvas>
                     </Grid>
                 </Grid>
             </ControlTemplate>
         </Setter>
     </Style>
-
     <Style Selector="ToggleButton.Switch:unchecked /template/ Border#SwitchKnob2">
-
         <Setter Property="Canvas.Left" Value="6" />
-
     </Style>
-
     <Style Selector="ToggleButton.Switch:checked /template/ Border#SwitchKnob2">
-
-        
         <Setter Property="Canvas.Left" Value="30" />
-
     </Style>
-
-
-
-
     <Style Selector="ToggleButton.Switch:checked /template/ Border#SwitchBackground">
         <Setter Property="Background" Value="{DynamicResource Accent}" />
     </Style>

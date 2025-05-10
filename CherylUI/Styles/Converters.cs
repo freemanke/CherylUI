@@ -3,7 +3,6 @@ using Avalonia.Data.Converters;
 
 namespace CherylUI.Styles;
 
-
 public class StringToDoubleConverter : IValueConverter
 {
     public static readonly StringToDoubleConverter Instance = new();

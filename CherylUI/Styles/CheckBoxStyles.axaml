@@ -4,21 +4,16 @@
             Background="{DynamicResource Background}"
             Height="240"
             Width="100">
-
-
             <Border
                 Classes="Card"
                 HorizontalAlignment="Center"
                 Margin="0"
-            
                 VerticalAlignment="Center">
                 <StackPanel
                     HorizontalAlignment="Center"
                     Orientation="Horizontal"
                     Spacing="20"
                     VerticalAlignment="Center">
-
-
                     <CheckBox />
                     <TextBlock
                         Classes="Secondary DemiBold"
@@ -30,7 +25,6 @@
     </Design.PreviewWith>
 
     <Style Selector="CheckBox">
-
         <Setter Property="Foreground" Value="{DynamicResource Accent}" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
@@ -68,7 +62,6 @@
                                 Stretch="Uniform"
                                 VerticalAlignment="Center"
                                 Width="13" />
-
                         </Panel>
                     </Border>
                     <ContentPresenter

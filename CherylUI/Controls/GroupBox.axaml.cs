@@ -22,12 +22,12 @@ public partial class GroupBox : UserControl
 
     public string Header
     {
-        get { return GetValue(HeaderProperty); }
-        set { SetValue(HeaderProperty, value); }
+        get => GetValue(HeaderProperty);
+        set => SetValue(HeaderProperty, value);
     }
 
     public static readonly StyledProperty<string?> TextProperty =
-        TextBlock.TextProperty.AddOwner<GroupBox>(new(
+        TextBlock.TextProperty.AddOwner<GroupBox>(new StyledPropertyMetadata<string?>(
             defaultBindingMode: BindingMode.TwoWay,
             enableDataValidation: true));
 

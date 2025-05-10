@@ -1,41 +1,25 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
-        <Border Padding="20" Width="200">
-            <Slider
-                Maximum="100"
-                Minimum="0"
-                Value="50" />
+        <Border Padding="20" Width="400">
+            <Slider Maximum="100" Minimum="0" Value="50" />
         </Border>
     </Design.PreviewWith>
-
     <Style Selector="RepeatButton.Decrease">
-
-
         <Setter Property="IsTabStop" Value="false" />
         <Setter Property="Focusable" Value="false" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
-                    <Border
-                        Background="Red"
-                        CornerRadius="10"
-                        Height="12"
-                        Margin="0,0,-12,0" />
+                    <Border Background="Red" CornerRadius="10" Height="12" Margin="0,0,-12,0" />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
-
-
     <Style Selector="Border.ThumbB">
         <Setter Property="BoxShadow" Value="0 0 4 0 #999999" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="BorderBrush" Value="{DynamicResource Accent}" />
-
-
     </Style>
-
     <Style Selector="Border.ThumbBorder">
         <Setter Property="Transitions">
             <Transitions>
@@ -43,13 +27,9 @@
             </Transitions>
         </Setter>
     </Style>
-
     <Style Selector="Border.ThumbBorder:pointerover">
-
         <Setter Property="BorderThickness" Value="1.5" />
-
     </Style>
-
     <Style Selector="Slider:horizontal">
         <Setter Property="MinWidth" Value="40" />
         <Setter Property="MinHeight" Value="20" />
@@ -70,7 +50,6 @@
                         Margin="8,0"
                         Name="TrackBackground"
                         VerticalAlignment="Center" />
-
                     <Track
                         Grid.Row="1"
                         IsDirectionReversed="{TemplateBinding IsDirectionReversed}"
@@ -105,20 +84,16 @@
                             </Thumb.Template>
                         </Thumb>
                     </Track>
-
-
                 </Grid>
             </ControlTemplate>
         </Setter>
     </Style>
-
     <Style Selector="Slider /template/ Track#PART_Track">
         <Setter Property="Minimum" Value="{TemplateBinding Minimum}" />
         <Setter Property="Maximum" Value="{TemplateBinding Maximum}" />
         <Setter Property="Value" Value="{TemplateBinding Value, Mode=TwoWay}" />
     </Style>
     <Style Selector="Slider /template/ Border#TrackBackground">
-
         <Setter Property="BorderThickness" Value="2" />
         <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderLowBrush}" />
     </Style>

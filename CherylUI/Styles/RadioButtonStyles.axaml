@@ -4,25 +4,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
         <Grid
-            Background="{DynamicResource Background}"
-            Height="700"
-            Width="700">
-
-
+            Background="{DynamicResource Background}" Width="400" Height="500" >
             <Border
                 Classes="Card"
-                HorizontalAlignment="Center"
-                Margin="50"
-                Padding="0,30"
-                VerticalAlignment="Center"
-                Width="300">
+                HorizontalAlignment="Center" Margin="50" Padding="0,30"  Width="300"
+                VerticalAlignment="Center">
                 <StackPanel
+                    Spacing="10" Width="200"
                     HorizontalAlignment="Center"
-                    Spacing="10"
-                    VerticalAlignment="Center"
-                    Width="200">
-
-
+                    VerticalAlignment="Center">
                     <RadioButton Height="80">
                         <TextBlock Text="Option 1" />
                     </RadioButton>
@@ -38,7 +28,6 @@
     </Design.PreviewWith>
 
     <Style Selector="RadioButton">
-
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="{DynamicResource ComponentBackground}" />
         <Setter Property="BorderThickness" Value="1.2" />
@@ -69,25 +58,16 @@
             </ControlTemplate>
         </Setter>
     </Style>
-
-
-
     <Style Selector="RadioButton:checked /template/ CheckBox">
         <Setter Property="IsChecked" Value="True" />
-     
     </Style>
- 
     <Style Selector="RadioButton TextBlock">
         <Setter Property="FontSize" Value="15" />
         <Setter Property="FontWeight" Value="DemiBold" />
     </Style>
-
     <Style Selector="RadioButton:checked /template/ glassMorphism|GlassCard#GlobalBorder">
         <Setter Property="Padding" Value="14,11"></Setter>
         <Setter Property="BorderBrush" Value="{DynamicResource Accent}" />
         <Setter Property="BorderThickness" Value="2" />
     </Style>
-
-  
-
 </Styles>

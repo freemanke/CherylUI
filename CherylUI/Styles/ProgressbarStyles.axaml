@@ -2,10 +2,8 @@
     <Design.PreviewWith>
         <Grid
             Background="{DynamicResource Background}"
-            Height="2400"
-            Width="1080">
-
-
+            Height="400"
+            Width="500">
             <Border
                 Classes="Card"
                 HorizontalAlignment="Center"
@@ -15,9 +13,7 @@
             </Border>
         </Grid>
     </Design.PreviewWith>
-
     <Style Selector="ProgressBar">
-
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="Background" Value="{DynamicResource ComponentBackground}" />
         <Setter Property="Foreground" Value="{DynamicResource Accent}" />
