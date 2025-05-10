@@ -1,6 +1,5 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui" 
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:glassMorphism="clr-namespace:CherylUI.Controls.GlassMorphism">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
         <Grid Background="{DynamicResource Background}" Height="800" Width="480">
             <TabControl>
@@ -43,8 +42,8 @@
             </TabControl>
         </Grid>
     </Design.PreviewWith>
-
-    <Style Selector="TabControl">
+    <!-- 移动应用导航控件样式，通过 classes=nav 来制定类别 -->
+    <Style Selector="TabControl.nav">
        <Setter Property="TabStripPlacement" Value="Bottom" />
         <Setter Property="Template">
             <ControlTemplate>
@@ -64,27 +63,27 @@
                             Name="PART_SelectedContentHost"
                             VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
                         <Border BorderBrush="{DynamicResource Separator}" BorderThickness="0,1,0,0" VerticalAlignment="Bottom" >
-                        <Panel>
-                            <Border Opacity="0.25" IsVisible="{DynamicResource IsDark}" Background="Black"></Border>
-                            <Border Opacity="0.25" IsVisible="{DynamicResource IsLight}" Background="White"></Border>
-                          <Border ClipToBounds="True" Background="White">
-                          </Border>
-                            <ItemsPresenter Name="PART_ItemsPresenter">
-                                <ItemsPresenter.ItemsPanel>
-                                    <ItemsPanelTemplate>
-                                        <UniformGrid Columns="{Binding Items}" Rows="1" />
-                                    </ItemsPanelTemplate>
-                                </ItemsPresenter.ItemsPanel>
-                            </ItemsPresenter>
-                        </Panel>
-                            </Border>
+                            <Panel>
+                                <Border Opacity="0.25" IsVisible="{DynamicResource IsDark}" Background="Black"></Border>
+                                <Border Opacity="0.25" IsVisible="{DynamicResource IsLight}" Background="White"></Border>
+                                <Border ClipToBounds="True" Background="White">
+                                </Border>
+                                <ItemsPresenter Name="PART_ItemsPresenter">
+                                    <ItemsPresenter.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <UniformGrid Columns="{Binding Items}" Rows="1" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsPresenter.ItemsPanel>
+                                </ItemsPresenter>
+                            </Panel>
+                        </Border>
                     </Panel>
                 </Border>
             </ControlTemplate>
         </Setter>
     </Style>
 
-    <Style Selector="TabItem">
+    <Style Selector="TabControl.nav TabItem">
         <Setter Property="FontSize" Value="50" />
         <Setter Property="FontWeight" Value="{DynamicResource TabItemHeaderThemeFontWeight}" />
         <Setter Property="Background" Value="Transparent" />
@@ -101,7 +100,6 @@
                     CornerRadius="20"
                     Name="PART_LayoutRoot"
                     Padding="{TemplateBinding Padding}">
-
                     <Panel>
                         <Border
                             CornerRadius="50"
@@ -109,7 +107,6 @@
                             Name="SelectedBorder"
                             Padding="0,0"
                             VerticalAlignment="Center">
-
                             <ContentPresenter
                                 Content="{TemplateBinding Header}"
                                 FontSize="50"
@@ -120,25 +117,24 @@
                                 Padding="4,8,4,4"
                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                         </Border>
-
                     </Panel>
                 </Border>
             </ControlTemplate>
         </Setter>
     </Style>
 
-    <Style Selector="TabItem TextBlock.Tab">
+    <Style Selector="TabControl.nav TabItem TextBlock.Tab">
         <Setter Property="FontWeight" Value="DemiBold" />
         <Setter Property="FontSize" Value="12" />
         <Setter Property="HorizontalAlignment" Value="Center"></Setter>
         <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
     </Style>
 
-    <Style Selector="TabItem:selected TextBlock.Tab">
+    <Style Selector="TabControl.nav TabItem:selected TextBlock.Tab">
         <Setter Property="Foreground" Value="{DynamicResource Accent}" />
     </Style>
 
-    <Style Selector="TabItem PathIcon.Tab">
+    <Style Selector="TabControl.nav TabItem PathIcon.Tab">
         <Setter Property="FontWeight" Value="DemiBold" />
         <Setter Property="Height" Value="20" />
         <Setter Property="Width" Value="20" />
@@ -152,7 +148,7 @@
         </Setter>
     </Style>
     
-    <Style Selector="TabItem:selected PathIcon.Tab">
+    <Style Selector="TabControl.nav TabItem:selected PathIcon.Tab">
         <Setter Property="Foreground" Value="{DynamicResource Accent}" />
     </Style>
 </Styles>
