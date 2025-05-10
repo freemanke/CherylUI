@@ -10,7 +10,6 @@
     <Color x:Key="Background">Transparent</Color>
     <Color x:Key="GridDialogBackground">#77ffffff</Color>
 
-
     <Color x:Key="Accent">#317AF7</Color>
     <Color x:Key="ContraryAccent">#317AF7</Color>
     <Color x:Key="SelectedAccent">#317AF7</Color>
@@ -32,5 +31,4 @@
     
     <Color x:Key="GlassCardBackground">#656565</Color>
     <Color x:Key="GlassCardOpaqueBackground">#222222</Color>
-
 </ResourceDictionary>

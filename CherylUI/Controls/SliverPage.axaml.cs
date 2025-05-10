@@ -24,8 +24,8 @@ namespace CherylUI.Controls;
 
         public string Header
         {
-            get { return GetValue(HeaderProperty); }
-            set { SetValue(HeaderProperty, value ); }
+            get => GetValue(HeaderProperty);
+            set => SetValue(HeaderProperty, value );
         }
         
         public static readonly StyledProperty<bool> IsBackVisibleProperty =
@@ -33,8 +33,8 @@ namespace CherylUI.Controls;
 
         public bool IsBackVisible
         {
-            get { return GetValue(IsBackVisibleProperty); }
-            set { SetValue(IsBackVisibleProperty, value ); }
+            get => GetValue(IsBackVisibleProperty);
+            set => SetValue(IsBackVisibleProperty, value );
         }
 
         private void GoBack(object? sender, RoutedEventArgs e)
@@ -50,16 +50,14 @@ namespace CherylUI.Controls;
         public object? Convert( object? value, Type targetType, object? parameter, CultureInfo culture )
         {
 
-            double Offset =  ((Vector)value).Y * 0.7;
+            var Offset =  ((Vector)value).Y * 0.7;
 
       
-            double Height = 170 - (Offset);
+            var Height = 170 - (Offset);
 
             if (Height < 100)
                 return 100;
-            else
-                return Height;
-
+            return Height;
         }
 
         public object ConvertBack( object? value, Type targetType, object? parameter, CultureInfo culture )

@@ -18,15 +18,12 @@
                             Classes="Secondary"
                             Margin="20,32,0,10"
                             Text="{TemplateBinding Header}" />
-
                         <glassMorphism:GlassCard ClipToBounds="True" Padding="0,10">
                             <Grid Margin="10,-6">
-
                                 <ContentControl Content="{TemplateBinding Content}" />
                             </Grid>
                         </glassMorphism:GlassCard>
                     </StackPanel>
-
                 </ControlTemplate>
             </Setter>
         </Style>

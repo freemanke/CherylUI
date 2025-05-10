@@ -10,7 +10,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Border Height="215" Width="350">
         <Grid>
-
             <Grid
                 Background="{DynamicResource DialogBackground}"
                 Height="110"
@@ -22,7 +21,6 @@
                 VerticalAlignment="Top"
                 Width="300">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-
                     <TextBlock
                         FontSize="10"
                         FontWeight="Thin"
@@ -62,15 +60,12 @@
                 <cherylUi:HorizontalSeparator Margin="0,35,0,0" Width="80" />
                 <cherylUi:HorizontalSeparator Margin="0,0,0,35" Width="80" />
             </Grid>
-
             <Button
                 Classes="Small"
                 Click="DoneClick"
                 VerticalAlignment="Bottom">
                 <TextBlock FontWeight="Bold" Text="Done" />
             </Button>
-
-
         </Grid>
     </Border>
 </UserControl>

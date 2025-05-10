@@ -12,29 +12,21 @@
         <Style Selector="formFields|FormFieldSwitch">
             <Setter Property="Template">
                 <ControlTemplate>
-
                     <DockPanel Height="47">
                         <ToggleButton
                             Classes="Switch"
                             DockPanel.Dock="Right"
                             HorizontalAlignment="Right"
-                            IsChecked="{TemplateBinding IsChecked,
-                                                        Mode=TwoWay}"
-                            Margin="-14,0"
+                            IsChecked="{TemplateBinding IsChecked, Mode=TwoWay}" Margin="-14,0"
                             VerticalAlignment="Center" />
                         <TextBlock
                             FontWeight="DemiBold"
                             HorizontalAlignment="Left"
                             Text="{TemplateBinding Title}"
                             VerticalAlignment="Center" />
-
                     </DockPanel>
-
                 </ControlTemplate>
             </Setter>
         </Style>
-
-
-
     </UserControl.Styles>
 </UserControl>

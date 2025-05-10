@@ -24,8 +24,7 @@
                             Margin="-30,0"
                             Maximum="{TemplateBinding Maximum}"
                             Minimum="{TemplateBinding Minimum}"
-                            Value="{TemplateBinding Value,
-                                                    Mode=TwoWay}"
+                            Value="{TemplateBinding Value, Mode=TwoWay}"
                             VerticalAlignment="Center" />
                     </Grid>
                 </ControlTemplate>

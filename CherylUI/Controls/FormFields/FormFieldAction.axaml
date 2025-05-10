@@ -12,7 +12,6 @@
         <Style Selector="formFields|FormFieldAction">
             <Setter Property="Template">
                 <ControlTemplate>
-
                     <Button
                         Classes="Void"
                         Command="{TemplateBinding Command}"
@@ -37,17 +36,10 @@
                                 HorizontalAlignment="Left"
                                 Text="{TemplateBinding Title}"
                                 VerticalAlignment="Center" />
-
-
-
                         </Grid>
                     </Button>
-
                 </ControlTemplate>
             </Setter>
         </Style>
-
-
-
     </UserControl.Styles>
 </UserControl>

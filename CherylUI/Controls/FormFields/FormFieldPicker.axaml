@@ -23,8 +23,7 @@
                             HorizontalAlignment="Right"
                             Items="{TemplateBinding Items}"
                             Margin="0,0,-30,0"
-                            SelectedItem="{TemplateBinding SelectedItem,
-                                                           Mode=TwoWay}"
+                            SelectedItem="{TemplateBinding SelectedItem, Mode=TwoWay}"
                             SubTitle="{TemplateBinding DialogSubTitle}"
                             Title="{TemplateBinding DialogTitle}"
                             VerticalAlignment="Center" />

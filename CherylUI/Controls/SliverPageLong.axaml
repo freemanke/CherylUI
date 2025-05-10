@@ -7,13 +7,11 @@
     xmlns:controls="clr-namespace:CherylUI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:glassMorphism="clr-namespace:CherylUI.Controls.GlassMorphism">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <UserControl.Styles>
         <Style Selector="controls|SliverPageLong">
             <Setter Property="Template">
                 <ControlTemplate>
-
                     <Grid Background="{DynamicResource Background}">
                         <Grid.Resources>
                             <controls:OffsetToHeightConverterLong x:Key="HeightConverter" />
@@ -33,11 +31,9 @@
                         </ScrollViewer>
 
                         <Border
-                      
                             BorderThickness="0,0,0,0"
                             Height="{Binding #scrollView.Offset, Converter={StaticResource HeightConverter}}"
                             VerticalAlignment="Top">
-
                             <Grid>
                               <Border ClipToBounds="True">
                               </Border>
@@ -48,9 +44,6 @@
                                     Opacity="{Binding #scrollView.Offset, Converter={StaticResource OpacityConverter}}"
                                     Text="{TemplateBinding Header}"
                                     VerticalAlignment="Center" />
-
-
-
                                 <TextBlock
                                     FontSize="25"
                                     HorizontalAlignment="Left"
@@ -65,16 +58,14 @@
                                     Padding="29,33"
                                     VerticalAlignment="Bottom">
                                     <PathIcon
-                                        Data="{StaticResource arrow_left_regular}"
+                                        Data="{StaticResource arrowLeft}"
                                         Foreground="{DynamicResource SecondaryText}"
                                         Height="20"
                                         Width="20" />
                                 </Button>
                             </Grid>
                         </Border>
-
                     </Grid>
-
                 </ControlTemplate>
             </Setter>
         </Style>

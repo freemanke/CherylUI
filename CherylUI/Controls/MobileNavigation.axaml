@@ -9,20 +9,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <UserControl.Styles>
-
-
-
         <Style Selector="controls|MobileNavigation">
             <Setter Property="Template">
                 <ControlTemplate>
                     <Grid>
                         <TransitioningContentControl Content="{TemplateBinding Content}" Name="base" />
-                
                     </Grid>
                 </ControlTemplate>
             </Setter>
         </Style>
-
-
     </UserControl.Styles>
 </UserControl>

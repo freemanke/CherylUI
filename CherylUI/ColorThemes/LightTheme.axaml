@@ -32,6 +32,4 @@
     
     <Color x:Key="GlassCardBackground">#aaffffff</Color>
     <Color x:Key="GlassCardOpaqueBackground">#fcfcfc</Color>
- 
-
 </ResourceDictionary>
